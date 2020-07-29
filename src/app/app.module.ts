@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ChatComponent } from './chat/chat.component';
+import { CommonModule } from '@angular/common';
 
 const config = {
   apiKey: 'AIzaSyAXzpHlyblkQB3k1D_l2P7ZyD8Kye9NSss',
@@ -25,10 +27,12 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     AppRoutingModule,
   //  Initialize angFireApp
@@ -41,3 +45,4 @@ const config = {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
